@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const hbs = require("hbs");
 
-router.get("/", function (res) {
+router.get("/", function (req, res, next) {
   res.render("index", { title: "Home", style: "app.css" });
 });
 
